@@ -8,14 +8,14 @@ The **User model** represents user data stored in the system. It
 contains fields used for identification, authentication, authorization,
 and record tracking.
 
-  Field           Description
-  --------------- -----------------------------------------------------
-  id              Unique identifier for each user
-  username        Username of the user
-  email           Email address of the user
-  password_hash   Password securely stored using bcrypt hashing
-  role            Role of the user (e.g., user or admin)
-  created_at      Timestamp showing when the user account was created
+| Field | Description |
+|------|-------------|
+| id | Unique identifier for each user |
+| username | Username of the user |
+| email | Email address of the user |
+| password_hash | Password securely stored using bcrypt hashing |
+| role | Role of the user (e.g., user or admin) |
+| created_at | Timestamp showing when the user account was created |
 
 ### User Model Implementation
 
@@ -61,13 +61,13 @@ class User:
 The application implements **CRUD operations** for managing user
 resources.
 
-  Method   Endpoint               Description
-  -------- ---------------------- --------------------------
-  POST     /users                 Create a new user
-  GET      /users                 Retrieve all users
-  GET      /users/`<id>`{=html}   Retrieve a specific user
-  PUT      /users/`<id>`{=html}   Update user details
-  DELETE   /users/`<id>`{=html}   Delete a user
+| Method | Endpoint | Description |
+|-------|----------|-------------|
+| POST | /users | Create a new user |
+| GET | /users | Retrieve all users |
+| GET | /users/<id> | Retrieve a specific user |
+| PUT | /users/<id> | Update user details |
+| DELETE | /users/<id> | Delete a user |
 
 ------------------------------------------------------------------------
 
