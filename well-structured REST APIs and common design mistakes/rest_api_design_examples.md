@@ -24,16 +24,16 @@ It follows REST principles such as:
 
 A good REST API treats users as resources, not actions.
 
-###  Endpoints
+## Endpoints
 
-  HTTP Method   Endpoint      Description
-  ------------- ------------- -----------------------
-  GET           /users        Fetch all users
-  GET           /users/{id}   Fetch a specific user
-  POST          /users        Create a new user
-  PUT           /users/{id}   Update user
-  PATCH         /users/{id}   Partial update
-  DELETE        /users/{id}   Delete user
+| HTTP Method | Endpoint      | Description            |
+|-------------|--------------|------------------------|
+| GET         | /users       | Fetch all users        |
+| GET         | /users/{id}  | Fetch a specific user  |
+| POST        | /users       | Create a new user      |
+| PUT         | /users/{id}  | Update user (full)     |
+| PATCH       | /users/{id}  | Partial update         |
+| DELETE      | /users/{id}  | Delete user            |
 
 ###  Example Request
 
@@ -66,14 +66,14 @@ curl http://127.0.0.1:5000/users
 
 Authentication APIs manage identity and access control.
 
-###  Endpoints
+## Endpoints
 
-  HTTP Method   Endpoint    Description
-  ------------- ----------- --------------------------------
-  POST          /register   Create account
-  POST          /login      Authenticate & generate tokens
-  POST          /refresh    Generate new access token
-  POST          /logout     Invalidate token (optional)
+| HTTP Method | Endpoint   | Description                              |
+|-------------|-----------|------------------------------------------|
+| POST        | /register | Create account                           |
+| POST        | /login    | Authenticate & generate tokens           |
+| POST        | /refresh  | Generate new access token                |
+| POST        | /logout   | Invalidate token (optional)              |
 
 ###  Example Login Request
 
@@ -148,15 +148,15 @@ Authorization: Bearer <access_token>
 
     DELETE /users/1
 
-### ✔ HTTP Methods Summary
+## ✔ HTTP Methods Summary
 
-  Method   Purpose
-  -------- ----------------
-  GET      Read
-  POST     Create
-  PUT      Full update
-  PATCH    Partial update
-  DELETE   Remove
+| Method | Purpose        |
+|--------|----------------|
+| GET    | Read           |
+| POST   | Create         |
+| PUT    | Full update    |
+| PATCH  | Partial update |
+| DELETE | Remove         |
 
 ------------------------------------------------------------------------
 
@@ -171,18 +171,18 @@ Authorization: Bearer <access_token>
 -   Misleading to client
 -   Hard to debug
 
-### Good
+## Good
 
-  Code   Meaning
-  ------ --------------
-  200    Success
-  201    Created
-  204    No content
-  400    Bad request
-  401    Unauthorized
-  403    Forbidden
-  404    Not found
-  500    Server error
+| Code | Meaning        |
+|------|----------------|
+| 200  | Success        |
+| 201  | Created        |
+| 204  | No content     |
+| 400  | Bad request    |
+| 401  | Unauthorized   |
+| 403  | Forbidden      |
+| 404  | Not found      |
+| 500  | Server error   |
 
 ###  Example Error Response
 
@@ -236,12 +236,12 @@ Accessible by anyone
 Authorization: Bearer <token>
 ```
 
-###  Types of Protection
+## Types of Protection
 
-  Type             Description
-  ---------------- ----------------------
-  Authentication   Who are you?
-  Authorization    What can you access?
+| Type           | Description              |
+|----------------|--------------------------|
+| Authentication | Who are you?             |
+| Authorization  | What can you access?     |
 
 ------------------------------------------------------------------------
 
@@ -315,14 +315,14 @@ Changes break existing clients
 
 ##  10. Missing Security Headers
 
-### Important Headers
+## Important Headers
 
-  Header                      Purpose
-  --------------------------- ----------------------
-  Content-Security-Policy     Prevent XSS
-  X-Frame-Options             Prevent clickjacking
-  Strict-Transport-Security   Force HTTPS
-  X-Content-Type-Options      Prevent MIME attacks
+| Header                    | Purpose                      |
+|--------------------------|------------------------------|
+| Content-Security-Policy  | Prevent XSS                  |
+| X-Frame-Options          | Prevent clickjacking         |
+| Strict-Transport-Security| Force HTTPS                  |
+| X-Content-Type-Options   | Prevent MIME attacks         |
 
 ------------------------------------------------------------------------
 
