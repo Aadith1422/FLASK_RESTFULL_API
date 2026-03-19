@@ -92,7 +92,7 @@ curl -X POST http://127.0.0.1:5000/login \
 }
 ```
 
-###  JWT Flow (Important for Interviews)
+###  JWT Flow 
 
 1.  User logs in → server verifies credentials\
 2.  Server returns:
@@ -359,7 +359,7 @@ Changes break existing clients
 
 ------------------------------------------------------------------------
 
-#  Real-World API Design Tips (Interview Gold)
+#  Real-World API Design Tips 
 
 -   Always think: **What is the resource?**
 
